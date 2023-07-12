@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "lifeUnwaster",
+    "version": "1.0",
+
+
+    "content_scripts": [
+        {
+          "js": ["./main.js"]
+        }
+    ]
+}
