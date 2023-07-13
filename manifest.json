@@ -2,11 +2,29 @@
     "manifest_version": 3,
     "name": "lifeUnwaster",
     "version": "1.0",
+    "description": "hi",
+    "permissions": [
+      "tabs",
+      "webRequest",
+      "activeTab"
+    ],
 
+    "web_accessible_resources": [
+      {
+        "resources": ["rocket.png"],
+        "matches": ["https://www.youtube.com/*", "https://twitter.com/*"]
+      }
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+      },
 
     "content_scripts": [
         {
+          "matches": ["https://www.youtube.com/*", "https://twitter.com/*"],
           "js": ["./main.js"]
         }
-    ]
+      ]
+    
 }
